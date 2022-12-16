@@ -1,0 +1,45 @@
+gcc -c -Wall -Werror -Wextra -std=c11 --coverage s21_*.c  
+ar rc s21_string.a s21_*.o 
+ranlib s21_string.a
+gcc -std=c11 -D_GNU_SOURCE --coverage test.c -L. s21_string.a  -lcheck -lm -lpthread -o ./test.out
+./test.out
+Running suite(s): Char Check
+94%: Checks: 38, Failures: 2, Errors: 0
+test.c:17:P:strcmp func:s21_strcmp_f:0: Passed
+test.c:35:P:strncmp func:s21_strncmp_f:0: Passed
+test.c:54:P:memcmp func:s21_memcmp_f:0: Passed
+test.c:293:P:strlen func:s21_strlen_f:0: Passed
+test.c:305:P:strcspn func:s21_strcspn_f:0: Passed
+test.c:317:P:strspn func:s21_strspn_f:0: Passed
+test.c:86:P:strcat func:s21_strcat_f:0: Passed
+test.c:123:P:strncat func:s21_strncat_f:0: Passed
+test.c:135:P:strchr func:s21_strchr_f:0: Passed
+test.c:166:P:strcpy func:s21_strcpy_f:0: Passed
+test.c:203:P:strncpy func:s21_strncpy_f:0: Passed
+test.c:276:P:strerror func:s21_strerror_f:0: Passed
+test.c:282:P:strerror func:s21_strerror_2:0: Passed
+test.c:215:P:strrchr func:s21_strrchr_f:0: Passed
+test.c:227:P:strstr func:s21_strstr_f:0: Passed
+test.c:258:P:strtok func:s21_strtok_f:0: Passed
+test.c:577:P:trim func:s21_trim_f:0: Passed
+test.c:270:P:strpbrk func:s21_strpbrk_f:0: Passed
+test.c:328:P:memchr func:s21_memchr_f:0: Passed
+test.c:364:P:memcpy func:s21_memcpy_f:0: Passed
+test.c:402:P:memmove func:s21_memmove_f:0: Passed
+test.c:478:P:to_upper func:s21_to_upper_f:0: Passed
+test.c:440:P:to_lower func:s21_to_lower_f:0: Passed
+test.c:510:P:memset func:s21_memset_f:0: Passed
+test.c:545:P:insert func:s21_insert_f:0: Passed
+test.c:589:P:CHARS check:s21_chars_f:0: Passed
+test.c:603:P:i d u check:s21_nums_f:0: Passed
+test.c:617:F:i d u check:s21_nums2_f:0: Assertion 's21_buffer == buffer' failed: s21_buffer == " 125123123123 160           101210  00 -25-51", buffer == " 125123123123 160            101 210  0 0 -25 -51"
+test.c:628:F:f check:s21_nums3_f:0: Assertion 's21_buffer == buffer' failed: s21_buffer == "+100.0000 -0.01 0.10000  12.000000 0.000010", buffer == "+100.0000 0.01 0.10000 -12.000000 0.000010"
+test.c:632:P:f check:s21_nums4_f:0: Passed
+test.c:641:P:f check:s21_nums5_f:0: Passed
+test.c:653:P:f check:s21_nums6_f:0: Passed
+test.c:663:P:f check:s21_nums7_f:0: Passed
+test.c:671:P:f check:s21_nums8_f:0: Passed
+test.c:681:P:f check:s21_nums9_f:0: Passed
+test.c:689:P:f check:s21_nums10_f:0: Passed
+test.c:697:P:f check:s21_nums11_f:0: Passed
+test.c:705:P:f check:s21_nums12_f:0: Passed
