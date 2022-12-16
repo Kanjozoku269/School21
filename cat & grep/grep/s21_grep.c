@@ -113,9 +113,6 @@ void funcRegex(FILE *file, char *fileName, int argc, allcounters *counters,
     if (pattern[strlen(pattern) - 1] == '\n') {
       pattern[strlen(pattern) - 1] = '\0';
     }
-    if (flags->iflag && flags->eflag) {
-    }
-
     if (!flags->cflag) {  // c (c+n); (cv+n); (co+n)
       if (counters->success == 0 && !flags->vflag && !flags->lflag &&
           !flags->oflag) {

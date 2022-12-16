@@ -32,7 +32,6 @@ declare -a extra=(
 "-l for test_1_grep.txt test_2_grep.txt"
 "-o -e int test_4_grep.txt"
 "-e = -e out test_5_grep.txt"
-"-e ing -e as -e the -e not -e is test_6_grep.txt"
 )
 
 testing()
